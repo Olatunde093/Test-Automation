@@ -51,6 +51,9 @@ class test{
     transfer(){
       return  cy.get("div#leftPanel > ul > li:nth-of-type(4) > a")
     }
+    validateBalance(){
+        return cy.get("div#leftPanel > ul > li:nth-of-type(2) > a")
+    }
 
     
 }

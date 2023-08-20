@@ -24,12 +24,12 @@ describe("Testing automation",()=>{
         tests.amount().type("100")
         tests.myaccount().select(0)
         tests.sendButton().click()
-        cy.get("div#leftPanel > ul > li:nth-of-type(2) > a").click()
+        tests.validateBalance().click()
 
         const Balance = AccountBalance - transaction;
         
         tests.AccountBalance().should('contain',Balance)
-
+    
 
 
     })
